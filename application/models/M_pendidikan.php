@@ -15,6 +15,20 @@ class M_pendidikan extends CI_Model
         $this->db->insert('tbl_pendidikan', $data);
     }
 
+    public function Detail($id){
+        $this->db->select('*');
+        $this->db->from('tbl_pendidikan');
+        $this->db->where('id', $id);
+        return $this->db->get()->row();
+    }
+
+    public function Edit($data) {
+
+        $this->db->where('id', $data['id']);
+        $this->db->update('tbl_pendidikan', $data);
+        
+    }
+
 }
 
 /* End of file ModelName.php */

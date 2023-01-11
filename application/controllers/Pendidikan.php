@@ -50,4 +50,30 @@ class Pendidikan extends CI_Controller
         
     }
 
+    public function edit($id) {
+        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required', array('required'=> '%s Wajib Diisi!!'));
+
+        $this->form_validation->set_rules('tahun', 'Tahun', 'required', array('required'=> '%s Wajib Diisi!!'));
+
+        if ($this->form_validation->run() == FALSE) {
+            # code...
+            $data = array(
+                'tittle' => 'Edit Data Pendidikan',
+                'pendidikan' => $this->m_pendidikan->Detail($id),
+                'isi' => 'back-end/pendidikan/v_edit'
+            );  
+            $this->load->view('back-end/layout/v_template', $data, FALSE);
+        } else {
+            $data = array(
+                'id' => $id,
+                'pendidikan' => $this->input->post('pendidikan'),
+                'jurusan' => $this->input->post('jurusan'),
+                'tahun' => $this->input->post('tahun')
+            );
+            $this->m_pendidikan->Edit($data);
+            $this->session->set_flashdata('pesan', 'Data Berhasil Diupdate!!');
+            redirect('pendidikan');
+        }
+    }
+
 }
