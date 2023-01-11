@@ -15,24 +15,24 @@
                  ?>
 
               <?php
-              echo form_open('pendidikan/add');
+              echo form_open('medsos/add');
               ?>
 
               <div class="form-group">
-                <label>Pendidikan</label>
-                <input class="form-control" name="pendidikan" value="<?php set_value('Pendidikan'); ?>" placeholder="Pendidikan">
+                <label>Icon</label>
+                <input class="form-control" name="icon" value="<?php set_value('icon'); ?>" placeholder="Icon">
               </div>
               <div class="form-group">
-                <label>Juruan</label>
-                <input class="form-control" name="jurusan" value="<?php set_value('Jurusan'); ?>" placeholder="Jurusan">
+                <label>Media Sosial</label>
+                <input class="form-control" name="medsos" value="<?php set_value('medsos'); ?>" placeholder="Media Sosial ">
               </div>
               <div class="form-group">
-                <label>Tahun</label>
-                <input class="form-control" name="tahun" value="<?php set_value('Tahun'); ?>" placeholder="Tahun">
+                <label>URL</label>
+                <input class="form-control" name="url" value="<?php set_value('url'); ?>" placeholder="URL">
               </div>
               <div class="form-group">
                 <button class= "btn btn-outline-primary" type="submit">Simpan</button>
-                <a href="<?= base_url('pendidikan')?>" class= "btn btn-outline-danger">Kembali</a>
+                <a href="<?= base_url('medsos')?>" class= "btn btn-outline-danger">Kembali</a>
               </div>
                 <?php echo form_close(); ?>
               </div>

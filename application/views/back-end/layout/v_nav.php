@@ -24,7 +24,7 @@
 
           <li class="nav-item">
             <a href="<?= base_url('medsos')?>" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fa fa-globe"></i>
               <p>
                 Media Sosial
               </p>
