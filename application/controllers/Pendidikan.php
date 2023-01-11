@@ -76,4 +76,13 @@ class Pendidikan extends CI_Controller
         }
     }
 
+    public function delete($id){
+        $data = array(
+            'id' => $id,
+        );
+        $this->m_pendidikan->Delete($data);
+        $this->session->set_flashdata('pesan', 'Data Berhasil Delete!!');
+        redirect('pendidikan');
+    }
+
 }

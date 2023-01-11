@@ -42,7 +42,7 @@
                     <td><?= $value->tahun ?></td>
                     <td>
                         <a href="<?= base_url('pendidikan/edit/'.$value->id)?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-                        <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                        <a href="<?= base_url('pendidikan/delete/'.$value->id)?>" onclick="return confirm('Apakah anda yakin ingin menghapus data..?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php } ?>

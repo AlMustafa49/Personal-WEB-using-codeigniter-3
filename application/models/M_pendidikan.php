@@ -29,6 +29,13 @@ class M_pendidikan extends CI_Model
         
     }
 
+    public function Delete($data) {
+
+        $this->db->where('id', $data['id']);
+        $this->db->delete('tbl_pendidikan', $data);
+        
+    }
+
 }
 
 /* End of file ModelName.php */
