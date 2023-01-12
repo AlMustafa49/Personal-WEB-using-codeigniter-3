@@ -30,6 +30,15 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="<?= base_url('skill')?>" class="nav-link">
+              <i class="nav-icon fa fa-star"></i>
+              <p>
+                Skill
+              </p>
+            </a>
+          </li>
           
                <li class="nav-item">
             <a href="#" class="nav-link ">
