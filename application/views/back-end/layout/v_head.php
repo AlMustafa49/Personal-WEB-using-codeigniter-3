@@ -13,4 +13,7 @@
     <link rel="stylesheet" href="<?=base_url('adminLTE')?>/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url('adminLTE')?>/dist/css/adminlte.min.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="<?=base_url('adminLTE')?>/plugins/summernote/summernote-bs4.min.css">
+
 </head>

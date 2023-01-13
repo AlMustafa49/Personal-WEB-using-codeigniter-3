@@ -50,6 +50,15 @@
         </li>
 
         <li class="nav-item">
+            <a href="<?= base_url('blog')?>" class="nav-link">
+                <i class="nav-icon fa fa-newspaper"></i>
+                <p>
+                    Blog
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a href="<?= base_url('admin/setting')?>" class="nav-link">
                 <i class="nav-icon fa fa-cog"></i>
                 <p>

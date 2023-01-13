@@ -10,6 +10,8 @@
 <!-- AdminLTE App -->
 <script src="<?=base_url('adminLTE')?>/dist/js/adminlte.min.js"></script>
 
+<script src="<?=base_url('adminLTE')?>/plugins/summernote/summernote-bs4.min.js"></script>
+
 <script>
 function bacaGambar(input) {
     if (input.files && input.files[0]) {
@@ -23,6 +25,19 @@ function bacaGambar(input) {
 $("#preview_gambar").change(function() {
     bacaGambar(this);
 });
+</script>
+
+<script>
+$(function() {
+    // Summernote
+    $('#summernote').summernote()
+
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+        mode: "htmlmixed",
+        theme: "monokai"
+    });
+})
 </script>
 
 </body>
