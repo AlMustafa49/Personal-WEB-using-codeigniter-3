@@ -22,13 +22,33 @@ class Home extends CI_Controller {
     public function index()
     {
         $data = array(
-            'tittle' => 'Home',
+            'tittle' => 'Profile',
             'isi' => 'front-end/v_home',
             'biodata' => $this->m_admin->detail(),
             'pendidikan' => $this->m_pendidikan->AllData(),
             'skill' => $this->m_skill->AllData(),
             'pengalaman' => $this->m_pengalaman->AllData(),
             'medsos' => $this->m_medsos->AllData(),
+        );  
+        $this->load->view('front-end/layout/v_template', $data, FALSE);
+    }
+
+    public function blog()
+    {
+        $data = array(
+            'tittle' => 'blog',
+            'isi' => 'front-end/v_blog',
+            'blog' => $this->m_blog->AllData(),
+        );  
+        $this->load->view('front-end/layout/v_template', $data, FALSE);
+    }
+
+    public function detail_blog($slug)
+    {
+        $data = array(
+            'tittle' => 'blog',
+            'isi' => 'front-end/v_detail_blog',
+            'blog' => $this->m_blog->Detail_Blog($slug),
         );  
         $this->load->view('front-end/layout/v_template', $data, FALSE);
     }

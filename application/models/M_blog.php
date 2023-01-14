@@ -21,6 +21,13 @@ class M_blog extends CI_Model {
         return $this->db->get()->row();
     }
 
+    public function Detail_Blog($slug){
+        $this->db->select('*');
+        $this->db->from('tbl_blog');
+        $this->db->where('slug', $slug);
+        return $this->db->get()->row();
+    }
+
     public function Edit($data) {
 
         $this->db->where('id', $data['id']);
