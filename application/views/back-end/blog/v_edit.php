@@ -12,28 +12,38 @@
                 echo validation_errors('<div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <i class="icon fas fa-ban"></i>','</div>');
+
+                //notif error upload
+                if(isset($error_upload)){
+                    echo '<div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <i class="icon fas fa-ban"></i>'.$error_upload.'</div>';
+                }
+
                  ?>
 
             <?php
-              echo form_open('medsos/edit/' . $medsos->id);
-
+              echo form_open_multipart('blog/edit/' . $blog->id);
               ?>
 
             <div class="form-group">
-                <label>Icon</label>
-                <input class="form-control" name="icon" value="<?= $medsos->icon ?>" placeholder="Icon">
+                <label>Judul</label>
+                <input class="form-control" name="judul" value="<?= $blog->judul ?>" placeholder="Judul Artikel">
             </div>
             <div class="form-group">
-                <label>Media Sosial</label>
-                <input class="form-control" name="medsos" value="<?= $medsos->medsos ?>" placeholder="Media Sosial ">
+                <label>Isi Blog</label>
+                <textarea name="isi_blog" class="form-control" id="summernote"><?= $blog->isi_blog ?></textarea>
             </div>
             <div class="form-group">
-                <label>URL</label>
-                <input class="form-control" name="url" value="<?= $medsos->url ?>" placeholder="URL">
+                <label>Ubah Gambar</label>
+                <input type="file" class="form-control" name="gambar" accept="image/*">
+            </div>
+            <div class="form-group">
+                <img src="<?= base_url('gambar/'. $blog->gambar)?>" width="250px">
             </div>
             <div class="form-group">
                 <button class="btn btn-outline-primary" type="submit">Simpan</button>
-                <a href="<?= base_url('medsos')?>" class="btn btn-outline-danger">Kembali</a>
+                <a href="<?= base_url('blog')?>" class="btn btn-outline-danger">Kembali</a>
             </div>
             <?php echo form_close(); ?>
         </div>
