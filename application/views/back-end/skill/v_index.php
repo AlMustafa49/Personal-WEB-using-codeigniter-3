@@ -29,7 +29,6 @@
                 <tr class="text-center">
                     <th width="50px">No</th>
                     <th>Skill</th>
-                    <!-- <th>Nilai</th> -->
                     <th width="150px">Action</th>
                 </tr>
                 <?php $no = 1;

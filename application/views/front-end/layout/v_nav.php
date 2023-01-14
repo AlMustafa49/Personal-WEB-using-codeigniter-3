@@ -2,8 +2,9 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a href="index3.html" class="nav-link">Home</a>
+            <a href="<?= base_url('home')?>" class="nav-link">Home</a>
         </li>
+
         <li class="nav-item">
             <a href="#" class="nav-link">Blog</a>
         </li>

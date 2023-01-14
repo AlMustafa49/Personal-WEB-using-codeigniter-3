@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card card-warning">
         <div class="card-header">
-            <h3 class="card-title"> <i class="nav-icon fas fa-graduation-cap"></i>
+            <h3 class="card-title"> <i class="nav-icon fas fa-list-alt"></i>
                 Data <?= $tittle ?>
             </h3>
 
