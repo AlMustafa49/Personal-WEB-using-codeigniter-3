@@ -9,6 +9,9 @@ class Pengalaman extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_pengalaman');
+        //proteksi halaman
+        $this->load->library('auth_login');
+        $this->auth_login->proteksi_halaman();
     }
     
 

@@ -13,7 +13,7 @@
 <!-- Right navbar links -->
 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
     <li class="nav-item">
-        <a href="#">
+        <a href="<?= base_url('auth')?>">
             <i class="fas fa-user"></i> Login
         </a>
     </li>

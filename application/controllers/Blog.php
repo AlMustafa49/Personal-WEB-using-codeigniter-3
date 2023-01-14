@@ -9,6 +9,9 @@ class Blog extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('m_blog');
+        //proteksi halaman
+        $this->load->library('auth_login');
+        $this->auth_login->proteksi_halaman();
     }
     
 
