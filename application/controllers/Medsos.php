@@ -23,7 +23,6 @@ class Medsos extends CI_Controller
             'medsos' => $this->m_medsos->AllData(),
             'isi' => 'back-end/medsos/v_index',
             'biodata' => $this->m_admin->Detail(),
-
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
     }
@@ -41,7 +40,9 @@ class Medsos extends CI_Controller
             # code...
             $data = array(
                 'tittle' => 'Add Data Media Sosial',
-                'isi' => 'back-end/medsos/v_add'
+                'isi' => 'back-end/medsos/v_add',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, false);
         } else {
@@ -71,7 +72,9 @@ class Medsos extends CI_Controller
             $data = array(
                 'tittle' => 'Edit Data Media Sosial',
                 'medsos' => $this->m_medsos->Detail($id),
-                'isi' => 'back-end/medsos/v_edit'
+                'isi' => 'back-end/medsos/v_edit',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {

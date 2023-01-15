@@ -9,15 +9,15 @@ class Admin extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->load->model('m_admin');
+    //proteksi halaman
+        $this->load->model('m_admin');
         $this->load->model('m_blog');
         $this->load->model('m_medsos');
         $this->load->model('m_pendidikan');
         $this->load->model('m_pengalaman');
         $this->load->model('m_skill');
-    //proteksi halaman
-    $this->load->library('auth_login');
-    $this->auth_login->proteksi_halaman();
+        $this->load->library('auth_login');
+        $this->auth_login->proteksi_halaman();
     
   }
   
@@ -27,10 +27,10 @@ class Admin extends CI_Controller
         'tittle' => 'Admin',
         'isi' => 'back-end/v_admin',
         'biodata' => $this->m_admin->detail(),
-            'pendidikan' => $this->m_pendidikan->AllData(),
-            'skill' => $this->m_skill->AllData(),
-            'pengalaman' => $this->m_pengalaman->AllData(),
-            'medsos' => $this->m_medsos->AllData(),
+        'pendidikan' => $this->m_pendidikan->AllData(),
+        'skill' => $this->m_skill->AllData(),
+        'pengalaman' => $this->m_pengalaman->AllData(),
+        'medsos' => $this->m_medsos->AllData(),
 
     );  
 

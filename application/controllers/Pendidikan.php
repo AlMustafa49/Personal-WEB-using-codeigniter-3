@@ -24,8 +24,6 @@ class Pendidikan extends CI_Controller
             'pendidikan' => $this->m_pendidikan->AllData(),
             'isi' => 'back-end/pendidikan/v_index',
             'biodata' => $this->m_admin->Detail(),
-
-
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
     }
@@ -41,7 +39,9 @@ class Pendidikan extends CI_Controller
             # code...
             $data = array(
                 'tittle' => 'Add Data Pendidikan',
-                'isi' => 'back-end/pendidikan/v_add'
+                'isi' => 'back-end/pendidikan/v_add',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {
@@ -68,7 +68,9 @@ class Pendidikan extends CI_Controller
             $data = array(
                 'tittle' => 'Edit Data Pendidikan',
                 'pendidikan' => $this->m_pendidikan->Detail($id),
-                'isi' => 'back-end/pendidikan/v_edit'
+                'isi' => 'back-end/pendidikan/v_edit',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {

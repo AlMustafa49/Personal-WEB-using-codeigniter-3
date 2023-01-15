@@ -24,7 +24,6 @@ class Pengalaman extends CI_Controller
             'pengalaman' => $this->m_pengalaman->AllData(),
             'isi' => 'back-end/pengalaman/v_index',
             'biodata' => $this->m_admin->Detail(),
-
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
     }
@@ -41,7 +40,9 @@ class Pengalaman extends CI_Controller
             # code...
             $data = array(
                 'tittle' => 'Add Data Pengalaman',
-                'isi' => 'back-end/pengalaman/v_add'
+                'isi' => 'back-end/pengalaman/v_add',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {
@@ -70,7 +71,9 @@ class Pengalaman extends CI_Controller
             $data = array(
                 'tittle' => 'Edit Data Pengalaman',
                 'pengalaman' => $this->m_pengalaman->Detail($id),
-                'isi' => 'back-end/pengalaman/v_edit'
+                'isi' => 'back-end/pengalaman/v_edit',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {

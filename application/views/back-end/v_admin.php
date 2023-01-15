@@ -3,7 +3,7 @@
 <div class="col-sm-12">
     <div class="row">
         <div class="col-sm-3">
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
                 <div class="card-body box-profile">
                     <div class="text-center">
                         <img class="img-fluid" src="<?=base_url('gambar/' . $biodata->foto)?>">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="col-sm-9">
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
                 <div class="card-body box-profile">
                     <strong><i class="fas fa-user"></i> Nama Lengkap</strong>
                     <p class="text-muted">
@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
                 <div class="card-body box-profile">
                     <strong><i class="fas fa-graduation-cap"></i> Pendidikan</strong>
 
@@ -79,7 +79,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
                 <div class="card-body box-profile">
                     <strong><i class="fas fa-star"></i> Skill</strong>
 
@@ -114,7 +114,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
                 <div class="card-body box-profile">
                     <strong><i class="fas fa-list-alt"></i> Pengalaman</strong>
 
@@ -145,7 +145,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
                 <div class="card-body box-profile">
                     <strong><i class="fas fa-globe"></i> Medsos</strong>
 

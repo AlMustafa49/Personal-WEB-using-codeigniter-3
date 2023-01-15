@@ -8,10 +8,9 @@ class Skill extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        //proteksi halaman
         $this->load->model('m_skill');
         $this->load->model('m_admin');
-
-        //proteksi halaman
         $this->load->library('auth_login');
         $this->auth_login->proteksi_halaman();
     }
@@ -24,7 +23,6 @@ class Skill extends CI_Controller
             'skill' => $this->m_skill->AllData(),
             'isi' => 'back-end/skill/v_index',
             'biodata' => $this->m_admin->Detail(),
-
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
     }
@@ -40,7 +38,8 @@ class Skill extends CI_Controller
             # code...
             $data = array(
                 'tittle' => 'Add Data Skill',
-                'isi' => 'back-end/skill/v_add'
+                'isi' => 'back-end/skill/v_add',
+                'biodata' => $this->m_admin->Detail(),
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {
@@ -66,7 +65,9 @@ class Skill extends CI_Controller
             $data = array(
                 'tittle' => 'Edit Data Skill',
                 'skill' => $this->m_skill->Detail($id),
-                'isi' => 'back-end/skill/v_edit'
+                'isi' => 'back-end/skill/v_edit',
+                'biodata' => $this->m_admin->Detail(),
+
             );  
             $this->load->view('back-end/layout/v_template', $data, FALSE);
         } else {

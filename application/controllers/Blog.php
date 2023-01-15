@@ -8,15 +8,13 @@ class Blog extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        //proteksi halaman
         $this->load->model('m_blog');
         $this->load->model('m_admin');
-
-        //proteksi halaman
         $this->load->library('auth_login');
         $this->auth_login->proteksi_halaman();
     }
     
-
     public function index()
     {
         $data = array(
@@ -40,6 +38,8 @@ class Blog extends CI_Controller {
             $data = array(
             'tittle' => 'Add Blog',
             'isi' => 'back-end/blog/v_add',
+            'biodata' => $this->m_admin->Detail(),
+
             // 'error_upload' => $this->upload->display_errors(),
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
@@ -88,6 +88,7 @@ class Blog extends CI_Controller {
             'tittle' => 'Edit Blog',
             'isi' => 'back-end/blog/v_edit',
             'blog' => $this->m_blog->Detail($id),
+            'biodata' => $this->m_admin->Detail(),
             // 'error_upload' => $this->upload->display_errors(),
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);

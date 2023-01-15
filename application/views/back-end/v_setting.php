@@ -110,7 +110,7 @@
                     <div class="col-sm-6">
                         <div class="group">
                             <br>
-                            <button class="btn btn-secondary" type="submit"><i class="fa fa-save"></i>
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i>
                                 Simpan</button>
                         </div>
                     </div>
