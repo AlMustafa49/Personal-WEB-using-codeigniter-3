@@ -9,6 +9,8 @@ class Pengalaman extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_pengalaman');
+        $this->load->model('m_admin');
+
         //proteksi halaman
         $this->load->library('auth_login');
         $this->auth_login->proteksi_halaman();
@@ -20,7 +22,9 @@ class Pengalaman extends CI_Controller
         $data = array(
             'tittle' => 'Pengalaman',
             'pengalaman' => $this->m_pengalaman->AllData(),
-            'isi' => 'back-end/pengalaman/v_index'
+            'isi' => 'back-end/pengalaman/v_index',
+            'biodata' => $this->m_admin->Detail(),
+
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
     }

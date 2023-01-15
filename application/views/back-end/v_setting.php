@@ -11,7 +11,8 @@
             <div class="card-body">
                 <?php echo form_open_multipart('admin/setting') ?>
                 <div class="form-group">
-                    <img src="<?= base_url('gambar/' . $biodata->foto)?>" id="gambar_load" width="220px" height="240px">
+                    <img class=" img-fluid pad" src="  <?= base_url('gambar/' . $biodata->foto)?>" id="gambar_load"
+                        width="220px" height="240px">
                 </div>
                 <div class="form-group">
                     <label>Ubah Foto</label>

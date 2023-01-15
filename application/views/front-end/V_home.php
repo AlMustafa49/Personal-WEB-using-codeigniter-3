@@ -58,7 +58,7 @@
                             <th>Tahun</th>
                         </tr>
                         <?php $no = 1;
-                foreach ($pendidikan as $key => $value) { ?>
+                        foreach ($pendidikan as $key => $value) { ?>
                         <tr class="text-center">
                             <td><?= $no++ ?></td>
                             <td><?= $value->pendidikan ?></td>

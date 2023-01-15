@@ -9,6 +9,8 @@ class Medsos extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_medsos');
+        $this->load->model('m_admin');
+
         //proteksi halaman
         $this->load->library('auth_login');
         $this->auth_login->proteksi_halaman();
@@ -19,7 +21,9 @@ class Medsos extends CI_Controller
         $data = array(
             'tittle' => 'Media Sosial',
             'medsos' => $this->m_medsos->AllData(),
-            'isi' => 'back-end/medsos/v_index'
+            'isi' => 'back-end/medsos/v_index',
+            'biodata' => $this->m_admin->Detail(),
+
         );  
         $this->load->view('back-end/layout/v_template', $data, FALSE);
     }

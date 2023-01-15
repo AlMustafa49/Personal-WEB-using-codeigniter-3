@@ -25,7 +25,7 @@
                 <a href="<?=base_url('home')?>" class="h1"><b>Personal</b> WEB</a>
             </div>
             <div class="card-body">
-                <? echo form_open_multipart('auth/index');
+                <?php echo form_open_multipart('auth/index');
                 
                 if ($this->session->flashdata('pesan')){
                     echo '<div class="alert alert-danger alert-dismissible">
